@@ -66,5 +66,8 @@
     <ClInclude Include="SpriteComponent.h">
       <Filter>Components\Sprites</Filter>
     </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

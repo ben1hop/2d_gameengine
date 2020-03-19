@@ -56,14 +56,25 @@ void Game::LoadLevel(int levelNumber) {
     // Start including new assets to the assetmanager list
 
     //Entity& newEntity(manager.AddEntity("projectile"));
-    std::string textureFilePath = "A:/ben1hop/CodeProjects/VisualStudio/2dgameengine_sdl/assets/images/tank-big-right.png";
-    assetManager->AddTexture("tank-image", textureFilePath.c_str());
+    // Itt adunk hozza az assetjeink map tipusu tarolojaba egy texture-t , ami kap egy index nevet es egy eleresi utat egy kephez
+    assetManager->AddTexture("tank-image", std::string("../assets/images/tank-big-right.png").c_str());
+    assetManager->AddTexture("chopper-image", std::string("../assets/images/chopper-spritesheet.png").c_str());
+    assetManager->AddTexture("radar-image", std::string("../assets/images/radar.png").c_str());
+
 
     // Start including entities and also components to them
-    Entity& newEntity(manager.AddEntity("tank"));
+    // Itt implementaljuk az uj entity-t a aminek ket komponenese lesz , egy transform a mozgashoz es egy sprite a hozza betoltott kep felhasznalasahoz
+    Entity& tankEntity(manager.AddEntity("tank"));
+    tankEntity.AddComponent<TransformComponent>(0, 0, 20, 20, 32, 32, 1);
+    tankEntity.AddComponent<SpriteComponent>("tank-image");
 
-    newEntity.AddComponent<TransformComponent>(0, 0, 20, 20, 32, 32, 1);
-    newEntity.AddComponent<SpriteComponent>("tank-image");
+    Entity& chopperEntity(manager.AddEntity("chopper"));
+    chopperEntity.AddComponent<TransformComponent>(240, 106, 0, 0, 32, 32, 1);
+    chopperEntity.AddComponent<SpriteComponent>("chopper-image", 2, 90, true , false);
+
+    Entity& radarEntity(manager.AddEntity("Radar"));
+    radarEntity.AddComponent<TransformComponent>(720, 15, 0, 0, 64, 64, 1);
+    radarEntity.AddComponent<SpriteComponent>("radar-image", 8, 150, false, true);
 }
 
 void Game::ProcessInput() {
