@@ -148,6 +148,7 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
@@ -163,6 +164,7 @@
     <ClInclude Include="KeyboardControlComponent.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TileComponent.h" />
     <ClInclude Include="TransformComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

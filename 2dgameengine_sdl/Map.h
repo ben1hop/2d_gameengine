@@ -3,6 +3,8 @@
 
 #include <string>
 
+extern EntityManager manager;
+
 class Map {
 private:
 	std::string textureId;
@@ -10,18 +12,14 @@ private:
 	int tileSize;
 
 public:
-	Map(std::string textureId, int scale, int tileSize) {
-		this->textureId = textureId;
-		this->scale = scale;
-		this->tileSize = tileSize;
-	}
+	Map(std::string textureId, int scale, int tileSize);
 	~Map();
-	void LoadMap(std::string filePath, int mapSizeX, int mapSizeY) {
-		// TODO read the map
-	}
-	void AddTile(int sourceX, int sourceY, int x, int y) {
-		// TODO
-	}
+
+	// Load the whole map by reading the source txt file
+	void LoadMap(std::string filePath, int mapSizeX, int mapSizeY);
+
+	// Add a tile to the map
+	void AddTile(int sourceX, int sourceY, int x, int y);
 };
 
 #endif

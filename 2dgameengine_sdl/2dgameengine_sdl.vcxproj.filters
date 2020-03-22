@@ -23,6 +23,9 @@
     <Filter Include="Components\Entity">
       <UniqueIdentifier>{896187e7-9427-47e3-bd21-50dec048760d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Map">
+      <UniqueIdentifier>{e8b679c7-b364-4924-a18b-030be6749481}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -42,6 +45,9 @@
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Components\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Components\Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,8 +84,11 @@
     <ClInclude Include="KeyboardControlComponent.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="TileComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
     <ClInclude Include="Map.h">
-      <Filter>Source Files</Filter>
+      <Filter>Components\Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
