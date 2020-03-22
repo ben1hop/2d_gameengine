@@ -8,18 +8,22 @@
 
 class SpriteComponent : public Component {
 private:
+	// Transform Component
 	TransformComponent* transform;
+
+	// Sdl components
 	SDL_Texture* texture;
 	SDL_Rect sourceRectangle;
 	SDL_Rect destinationRectangle;
 
+	// Animation properties
+	std::map<std::string, Animation> animations;
+	std::string currentAnimationName;
+	unsigned int animationIndex = 0;
 	bool isAnimated;
 	int numFrames;
 	int animationSpeed;
 	bool isFixed;
-	std::map<std::string, Animation> animations;
-	std::string currentAnimationName;
-	unsigned int animationIndex = 0;
 
 public:
 	SDL_RendererFlip spriteFlip = SDL_FLIP_NONE;
