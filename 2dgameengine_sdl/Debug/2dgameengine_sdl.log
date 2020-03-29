@@ -1,20 +1,14 @@
-﻿  Map.cpp
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+﻿  Game.cpp
 A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TextureManager.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(31,16): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(10,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(153,48): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(32,16): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(154,48): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   2dgameengine_sdl.vcxproj -> A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\Debug\2dgameengine_sdl.exe
