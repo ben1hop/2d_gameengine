@@ -1,6 +1,8 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
+#include <SDL.h>
+
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 
@@ -16,7 +18,7 @@ enum CollisionType {
 	PLAYER_LEVEL_COMPLETE_COLLISION
 };
 
-// For rendering onto
+// For rendering
 enum LayerType {
 	TILEMAP_LAYER = 0,
 	VEGETATION_LAYER = 1,
@@ -27,6 +29,10 @@ enum LayerType {
 	UI_LAYER = 6
 };
 
-const unsigned int NUM_LAYERS = 6;
+// Number of the layers
+const unsigned int NUM_LAYERS = 7;
+
+const SDL_Color WHITE_COLOR = { 255 , 255 , 255 ,255 };
+const SDL_Color GREEN_COLOR = { 0, 255 , 0 , 255 };
 
 #endif

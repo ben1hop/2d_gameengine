@@ -1,15 +1,55 @@
-﻿  Game.cpp
+﻿  AssetManager.cpp
 A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TextureManager.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(10,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Entity.cpp
+  EntityManager.cpp
 A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\ColliderComponent.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(174,48): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+  FontManager.cpp
+  Game.cpp
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TextureManager.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(9,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\ColliderComponent.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(183,48): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(175,48): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Game.cpp(184,48): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
+  Map.cpp
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TextureManager.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(31,16): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(32,16): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(40,39): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TileComponent.h(41,39): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\Map.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Source.cpp
+  TextureManager.cpp
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\TextureManager.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\2dgameengine_sdl\EntityManager.cpp(104): warning C4715: 'EntityManager::CheckCollision': not all control paths return a value
   2dgameengine_sdl.vcxproj -> A:\ben1hop\CodeProjects\VisualStudio\2dgameengine_sdl\Debug\2dgameengine_sdl.exe

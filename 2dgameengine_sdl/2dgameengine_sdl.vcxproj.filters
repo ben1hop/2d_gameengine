@@ -26,6 +26,12 @@
     <Filter Include="Components\Map">
       <UniqueIdentifier>{e8b679c7-b364-4924-a18b-030be6749481}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Managers\Font">
+      <UniqueIdentifier>{aa30a1e9-6fc5-4999-996c-be36b49c3fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Collision">
+      <UniqueIdentifier>{ff05dd72-dd03-4e8c-9c02-e4126c3225e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -49,8 +55,11 @@
     <ClCompile Include="Map.cpp">
       <Filter>Components\Map</Filter>
     </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>Managers\Font</Filter>
+    </ClCompile>
     <ClCompile Include="Collision.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Components\Collision</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -84,20 +93,26 @@
     <ClInclude Include="Entity.h">
       <Filter>Components\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="KeyboardControlComponent.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="TileComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Components\Map</Filter>
     </ClInclude>
-    <ClInclude Include="Collision.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="ColliderComponent.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>Managers\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="TextLabelComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardControlComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Components\Collision</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
