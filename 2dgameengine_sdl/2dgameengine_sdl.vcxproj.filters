@@ -49,6 +49,9 @@
     <ClCompile Include="Map.cpp">
       <Filter>Components\Map</Filter>
     </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TransformComponent.h">
@@ -89,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Components\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderComponent.h">
+      <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

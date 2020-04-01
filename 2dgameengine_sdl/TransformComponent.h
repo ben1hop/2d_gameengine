@@ -30,6 +30,19 @@ public:
 		// TODO
 		position.x += velocity.x * deltaTime;
 		position.y += velocity.y * deltaTime;
+
+		if (position.x > WINDOW_WIDTH -22) {
+			position.x -= velocity.x * deltaTime;
+		}
+		if (position.x < 0){
+			position.x -= velocity.x * deltaTime;
+		}
+		if (position.y > WINDOW_HEIGHT) {
+			position.y -= velocity.y * deltaTime;
+		}
+		if (position.y < 0) {
+			position.y -= velocity.y * deltaTime;
+		}
 	}
 
 	void Render() override {

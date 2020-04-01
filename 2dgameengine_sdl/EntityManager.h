@@ -8,7 +8,6 @@
 class EntityManager
 {
 private:
-
 	std::vector<Entity*> entities;
 public:
 	void ClearData();
@@ -24,7 +23,7 @@ public:
 
 	Entity& AddEntity(std::string entityName, LayerType layer);
 
-	
+	CollisionType CheckCollision() const;
 };
 
 #endif

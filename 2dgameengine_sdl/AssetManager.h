@@ -6,6 +6,7 @@
 #include "./TextureManager.h"
 #include "./EntityManager.h"
 
+// Storing an entities textures
 class AssetManager {
 private:
 	EntityManager* manager;

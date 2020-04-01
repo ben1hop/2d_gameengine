@@ -3,6 +3,7 @@
 
 #include "./Game.h";
 
+// Using sdl to load a texture -> Asset manager stores them
 class TextureManager {
 public:
 	static SDL_Texture* LoadTexture(const char* filename);

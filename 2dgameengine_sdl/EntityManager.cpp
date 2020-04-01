@@ -1,4 +1,8 @@
 #include "./EntityManager.h"
+#include "./Collision.h"
+#include "./ColliderComponent.h"
+
+#include <iostream>
 
 void EntityManager::ClearData() {
 	for (auto& entity : entities) {
@@ -47,4 +51,54 @@ std::vector<Entity*> EntityManager::GetEntitites() const {
 
 unsigned int EntityManager::GetEntityCount() const {
 	return entities.size();
+}
+
+void EntityManager::ListAllEntites() const {
+	unsigned int i = 0;
+	for (auto& entity : entities) {
+		std::cout << "Entity[" << i << "]: " << entity->name << std::endl;
+		entity->ListAllComponents();
+		i++;
+	}
+}
+
+CollisionType EntityManager::CheckCollision() const {
+	// This one needs a little bit of editing
+	// Too much itterations , doesnt check opposite order pairs
+	for (auto& thisEntity : entities) {
+		if (thisEntity->HasComponent<ColliderComponent>()) {
+			ColliderComponent* thisCollider = thisEntity->GetComponent<ColliderComponent>();
+			for (auto& thatEntity : entities) {
+				if (thisEntity->name.compare(thatEntity->name) != 0 && thatEntity->HasComponent<ColliderComponent>()) {
+					ColliderComponent* thatCollider = thatEntity->GetComponent<ColliderComponent>();
+					if (Collision::CheckRectangleCollision(thisCollider->collider, thatCollider->collider)) {
+						if (
+							thisCollider->colliderTag.compare("PLAYER") == 0 &&
+							thatCollider->colliderTag.compare("ENEMY") == 0
+							) {
+							return PLAYER_ENEMY_COLLISION;
+						}
+						if (
+							thisCollider->colliderTag.compare("PLAYER") == 0 &&
+							thatCollider->colliderTag.compare("PROJECTILE") == 0
+							) {
+							return PLAYER_PROJECTILE_COLLISION;
+						}
+						if (
+							thisCollider->colliderTag.compare("ENEMY") == 0 &&
+							thatCollider->colliderTag.compare("FRIENDLY_PROJECTILE") == 0
+							) {
+							return ENEMY_PROJECTILE_COLLISION;
+						}
+						if (
+							thisCollider->colliderTag.compare("PLAYER") == 0 &&
+							thatCollider->colliderTag.compare("LEVEL_COMPLETE") == 0
+							) {
+							return PLAYER_LEVEL_COMPLETE_COLLISION;
+						}
+					}
+				}
+			}
+		}
+	}
 }

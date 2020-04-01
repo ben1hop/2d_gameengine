@@ -34,6 +34,7 @@ public:
 	void Render();
 	void Destroy();
 	bool isActivee() const;
+	void ListAllComponents() const {}; //TODO
 
 
 	// AddComponent T is for any component type
@@ -48,6 +49,12 @@ public:
 		newComponent->Initialize();
 
 		return *newComponent;
+	}
+
+	// return if you have this kind of type
+	template <typename T>
+	bool HasComponent() const {
+		return componentTypeMap.count(&typeid(T));
 	}
 
 	template <typename T>

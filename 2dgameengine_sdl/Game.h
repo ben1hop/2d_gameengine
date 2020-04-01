@@ -34,6 +34,9 @@ public:
     void Render();
     void Destroy();
     void HandleCameraMovement();
+    void CheckCollisions();
+    void ProcessNextLevel(int levelNumber);
+    void ProcessGameOver();
 };
 
 #endif
