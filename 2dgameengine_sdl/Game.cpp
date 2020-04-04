@@ -10,6 +10,7 @@
 #include "./ColliderComponent.h"
 #include "./TextLabelComponent.h"
 #include "./glm/glm.hpp"
+#include "./ProjectileEmitterComponent.h"
 
 
 EntityManager manager;
@@ -78,6 +79,7 @@ void Game::LoadLevel(int levelNumber) {
     assetManager->AddTexture("radar-image", std::string("../assets/images/radar.png").c_str());
     assetManager->AddTexture("jungle-tile", std::string("../assets/tilemaps/jungle.png").c_str());
     assetManager->AddTexture("helipad-image", std::string("../assets/images/heliport.png").c_str());
+    assetManager->AddTexture("projectile-image", std::string("../assets/images/bullet-enemy.png").c_str());
     assetManager->AddFont("charriot-font", std::string("../assets/fonts/charriot.ttf").c_str(), 20);
 
     map = new Map("jungle-tile", 1, 32);
@@ -86,17 +88,22 @@ void Game::LoadLevel(int levelNumber) {
     // Start including entities and also components to them
     // Itt implementaljuk az uj entity-t a aminek ket komponenese lesz , egy transform a mozgashoz es egy sprite a hozza betoltott kep felhasznalasahoz
 
-    Entity& tankEntity(manager.AddEntity("tank" , ENEMY_LAYER));
-    tankEntity.AddComponent<TransformComponent>(0, 0, 20, 20, 32, 32, 1);
-    tankEntity.AddComponent<SpriteComponent>("tank-image");
-    tankEntity.AddComponent<ColliderComponent>("ENEMY", 0, 0, 20, 20);
-
-
     // the entity declaration moved out from the function for the camera movement
     player.AddComponent<TransformComponent>(240, 106, 0, 0, 32, 32, 1);
     player.AddComponent<SpriteComponent>("chopper-image", 2, 90, true , false);
     player.AddComponent<KeyboardControlComponent>("up" , "right" , "left" , "down" , "space");
     player.AddComponent<ColliderComponent>("PLAYER", 240, 106, 20, 20);
+
+    Entity& tankEntity(manager.AddEntity("tank", ENEMY_LAYER));
+    tankEntity.AddComponent<TransformComponent>(100, 200, 20, 20, 32, 32, 1);
+    tankEntity.AddComponent<SpriteComponent>("tank-image");
+    tankEntity.AddComponent<ColliderComponent>("ENEMY", 0, 0, 20, 20);
+
+    Entity& projectile(manager.AddEntity("projectile", PROJECTILE_LAYER));
+    projectile.AddComponent<TransformComponent>(100 + 16, 200+16 , 0, 0, 4, 4, 1);
+    projectile.AddComponent<SpriteComponent>("projectile-image");
+    projectile.AddComponent<ColliderComponent>("PROJECTILE", 150+16 , 495+16 , 4 , 4);
+    projectile.AddComponent<ProjectileEmitterComponent>(50 , 270 , 200 , true);
 
     //Level end entity
     Entity& heliport(manager.AddEntity("heliport", OBSTACLE_LAYER));
@@ -191,12 +198,25 @@ void Game::HandleCameraMovement() {
 }
 
 void Game::CheckCollisions() {
+    // switch statement ide
     CollisionType collisionType = manager.CheckCollision();
-    if (collisionType == PLAYER_ENEMY_COLLISION) {
-        ProcessGameOver();
-    }
-    if (collisionType == PLAYER_LEVEL_COMPLETE_COLLISION) {
-        ProcessNextLevel(1);
+
+    switch (collisionType) {
+    case PLAYER_ENEMY_COLLISION:
+        std::cout << "PLAYER_ENEMY_COLLISION";
+        break;
+    case PLAYER_PROJECTILE_COLLISION:
+        std::cout << "PLAYER_PROJECTILE_COLLISION";
+        break;
+    case PLAYER_LEVEL_COMPLETE_COLLISION:
+        std::cout << "PLAYER_LEVEL_COMPLETE_COLLISION";
+        break;
+    case PLAYER_VEGETATION_COLLISION:
+        break;
+    case ENEMY_PROJECTILE_COLLISION:
+        break;
+    case NO_COLLISION:
+        break;
     }
 }
 

@@ -15,9 +15,14 @@ bool EntityManager::HasNoEntities() const {
 }
 
 void EntityManager::Update(float deltaTime) {
-	for (auto& entity : entities) {
-		entity->Update(deltaTime);
+	for (int i = 0; i < entities.size(); i++) {
+		entities[i]->Update(deltaTime);
+		if (!entities[i]->IsActive()) {
+			entities.erase(entities.begin() + i);
+			i--;
+		}
 	}
+	
 }
 
 std::vector<Entity*> EntityManager::GetEntititesByLayer(LayerType layer) const {
@@ -29,6 +34,7 @@ std::vector<Entity*> EntityManager::GetEntititesByLayer(LayerType layer) const {
 	}
 	return selectEntities;
 }
+
 
 void EntityManager::Render() {
 

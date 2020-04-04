@@ -24,6 +24,8 @@ public:
 	Entity& AddEntity(std::string entityName, LayerType layer);
 
 	CollisionType CheckCollision() const;
+
+	void DestroyInactiveEntities();
 };
 
 #endif

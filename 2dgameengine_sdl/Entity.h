@@ -33,7 +33,7 @@ public:
 	void Update(float deltaTime);
 	void Render();
 	void Destroy();
-	bool isActivee() const;
+	bool IsActive() const;
 	void ListAllComponents() const {}; //TODO
 
 

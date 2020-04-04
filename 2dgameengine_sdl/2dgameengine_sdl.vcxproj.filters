@@ -114,5 +114,8 @@
     <ClInclude Include="Collision.h">
       <Filter>Components\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="ProjectileEmitterComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
